@@ -8,14 +8,24 @@ import java.util.ListIterator;
  */
 public class DenissaList extends LinkedList {
 
+    /*
+    enhance the initial behavior of list remove by printing the new list
+     */
     public Object remove(int index1) {
 
         Object o1 = super.remove(index1);
+        for (Object o : this) {
+            System.out.println(o);
+        }
+
+        /* or the old style
         ListIterator li =this.listIterator();
         while(li.hasNext()) {
             Object o = li.next();
             System.out.println(o);
         }
+         */
+
         return o1;
     }
 }
